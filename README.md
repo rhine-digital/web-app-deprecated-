@@ -1,5 +1,5 @@
 # Rhine Web-App
-
+This is build on React + GraphQL + MongoDB for testing purposes.
 
 Install all dependencies
 ```sh

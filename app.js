@@ -7,10 +7,11 @@ const graphQlResolvers=require('./graphql/resolvers/index');
 const app = express();
 const encodedPassword = encodeURIComponent(process.env.MONGO_PASSWORD);
 const encodedUser = encodeURIComponent(process.env.MONGO_USER)
+const isAuth = require('./middleware/is-auth');
 
 app.use(bodyParser.json());
 
-
+app.use(isAuth);
 
 app.use(
   '/graphql',

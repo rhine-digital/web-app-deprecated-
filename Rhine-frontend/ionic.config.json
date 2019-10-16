@@ -1,7 +1,0 @@
-{
-  "name": "Rhine",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "react"
-}

@@ -1,27 +1,40 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-
+import AuthContext from '../context/auth-context';
+import { Nav } from 'react-bootstrap';
 import './MainNavigation.css';
 
 const mainNavigation = props => (
-  <header className="main-navigation">
-    <div className="main-navigation__logo">
-      <h1>Rhine</h1>
-    </div>
-    <nav className="main-navigation__items">
+  <AuthContext.Consumer>
+    {(context) => {
+      return(
+        <div className="main-navigation">
+
+       <NavLink to="/auth"  className="main-navigation__logo">
+       <img src="https://res.cloudinary.com/mhmd/image/upload/v1557368579/logo_iqjuay.png" width="45" alt="Rhine"/>
+       </NavLink>
+        
+      <Nav className="main-navigation__items">
       <ul>
-        <li>
+        
+          {!context.token &&<li>
           <NavLink to="/auth">Authenticate</NavLink>
-        </li>
+        </li>}
+        
         <li>
           <NavLink to="/events">Events</NavLink>
         </li>
-        <li>
+       {context.token && <li>
           <NavLink to="/bookings">Bookings</NavLink>
-        </li>
+        </li> }
       </ul>
-    </nav>
-  </header>
+    </Nav>
+  </div>
+
+      )
+    }}
+  
+  </AuthContext.Consumer>
 );
 
 export default mainNavigation;

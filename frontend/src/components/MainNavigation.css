@@ -8,13 +8,16 @@
     padding: 0 1rem;
     display: flex;
     align-items: center;
+    text-decoration: none;
+
   }
   
-  .main-navigation__logo h1 {
+  .main-navigation__logo {
     margin: 0;
-    font-size: 1.5rem;
-  }
   
+  }
+
+
   .main-navigation__items {
     margin-left: 1.5rem;
   }
@@ -40,5 +43,3 @@
   .main-navigation__items a.active {
       color: whitesmoke;
   }
-
-  

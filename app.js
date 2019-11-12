@@ -35,7 +35,9 @@ app.use(
 
 mongoose.connect(`mongodb+srv://${encodedUser}:${encodedPassword}@rhine-test-pvzja.azure.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`,{useNewUrlParser:true,useUnifiedTopology:true})
 .then( ()=> {
-  app.listen(8000);
+  console.log('MongoDB Connected.')
+  const port = process.env.PORT || 8000;
+  app.listen(port, ()=> console.log(`Server started on port ${port}`));
 })
 .catch(err =>{ console.log(err);
 });

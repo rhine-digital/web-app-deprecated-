@@ -1,42 +1,43 @@
+  
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background: #42455a;
-}
-
-
-.form-control label,
-.form-control input{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background:#42455a;
+  }
+  
+  .form-control label,
+  .form-control input,
+  .form-control textarea {
     width: 100%;
     display: block;
-}
-
-.form-control label{
+  }
+  
+  .form-control label {
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-control {
     margin-bottom: 1rem;
-}
-
-
-.form-control {
-    margin-bottom: 3rem;
-}
-
-.form-actions button,
-.btn{
+  }
+  
+  .form-actions button,
+  .btn {
     background: lightseagreen;
     font: inherit;
     border: 1px solid lightseagreen;
     border-radius: 3px;
-    padding:  0.25rem 1rem;
-    margin-right:1rem;
-    box-shadow: 1px 1px 5px rgba(0, 0,0, 26);
+    padding: 0.25rem 1rem;
+    margin-right: 1rem;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.26);
+    color: white;
     cursor: pointer;
-}
-
-.form-actions button :hover,
-.form-actions button:active,
-.btn:hover,
-.btn:active {
-    background: rgb(19, 102, 98);
-    border-color:rgb(19, 102, 98);
-}
+  }
+  
+  .form-actions button:hover,
+  .form-actions button:active,
+  .btn:hover,
+  .btn:active {
+    background: lightseagreen;
+    border-color: lightseagreen;
+  }

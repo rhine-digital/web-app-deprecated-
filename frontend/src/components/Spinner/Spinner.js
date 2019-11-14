@@ -2,7 +2,7 @@ import React from 'react';
 import './Spinner.css';
 const spinner = () => (
 <div className="spinner">
-<div class="lds-facebook"><div></div><div></div><div></div></div>
+<div className="lds-facebook"><div></div><div></div><div></div></div>
 </div>
 );
 

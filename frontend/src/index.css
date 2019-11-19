@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background:#42455a;
+    background:white;
   }
   
   .form-control label,
@@ -23,9 +23,9 @@ body {
   
   .form-actions button,
   .btn {
-    background: lightseagreen;
+    background: lightskyblue;
     font: inherit;
-    border: 1px solid lightseagreen;
+    border: 1px solid lightskyblue;
     border-radius: 3px;
     padding: 0.25rem 1rem;
     margin-right: 1rem;
@@ -38,6 +38,6 @@ body {
   .form-actions button:active,
   .btn:hover,
   .btn:active {
-    background: lightseagreen;
-    border-color: lightseagreen;
+    background: lightskyblue;
+    border-color: lightskyblue;
   }

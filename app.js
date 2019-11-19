@@ -4,11 +4,12 @@ const graphqlHttp = require('express-graphql');
 const mongoose = require('mongoose');
 const graphQlSchema=require('./graphql/schema/index') ;
 const graphQlResolvers=require('./graphql/resolvers/index');
-const app = express();
 const encodedPassword = encodeURIComponent(process.env.MONGO_PASSWORD);
 const encodedUser = encodeURIComponent(process.env.MONGO_USER)
 const isAuth = require('./middleware/is-auth');
 
+
+const app = express();
 app.use(bodyParser.json());
 
 app.use((req, res, next) => {

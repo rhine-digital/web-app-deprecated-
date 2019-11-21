@@ -4,12 +4,13 @@
   top: 0;
   width: 100%;
   height: 3.5rem;
-  background: lightskyblue;
+  background: whitesmoke;
   padding: 0 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.26);
 }
   
   .main-navigation__logo {
@@ -37,7 +38,7 @@
   .main-navigation__items a,
   .main-navigation__items button{
     text-decoration: none;
-    color: #ffffff;
+    color: lightslategray;
     padding: 0.25rem 0.5rem;
     border: none;
     font: inherit;
@@ -52,7 +53,7 @@
   .main-navigation__items a.active,
   .main-navigation__items button:hover,
   .main-navigation__items button:active {
-    background: #ffffff;
-    color: lightskyblue;
+    background: lightskyblue;
+    color: white;
     border-radius: 5px;
   }

@@ -7,6 +7,9 @@ import EventsPage from './pages/Events';
 import MainNavigation from './components/MainNavigation';
 import AuthContext from './context/auth-context';
 import './App.css';
+import HomePage from './pages/Home';
+import SideBar from './components/Sidebar/Sidebar';
+
 
 class App extends Component {
   state ={
@@ -25,11 +28,13 @@ class App extends Component {
       <BrowserRouter>
       <React.Fragment>
       <AuthContext.Provider value ={{token:this.state.token,userId:this.state.userId ,login: this.login , logout: this.logout}}>
-      <MainNavigation/>
+    <SideBar/>
+    <MainNavigation/>
       <main className="main-content">
       <Switch>
-         {this.state.token &&(<Redirect from="/" to="/events" exact />)}         
-         {this.state.token &&(<Redirect from="/auth" to="/events" exact />)}  
+         {this.state.token &&(<Redirect from="/" to="/auth" exact />)}         
+         {this.state.token &&(<Redirect from="/auth" to="/Home" />)}
+          {this.state.token &&(<Route path="/home" component={HomePage}/>)}  
          {!this.state.token &&(<Route path="/auth" component={AuthPage} />)}
          <Route path="/events" component={EventsPage} />
          {this.state.token && (<Route path="/bookings" component={BookingsPage} />)}

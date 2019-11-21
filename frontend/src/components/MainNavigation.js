@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom';
 import AuthContext from '../context/auth-context';
 import { Nav } from 'react-bootstrap';
 import './MainNavigation.css';
+import { faSignOutAlt , faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const mainNavigation = props => (
   <AuthContext.Consumer>
@@ -20,7 +22,7 @@ const mainNavigation = props => (
           {!context.token && (
           <li>
             
-          <NavLink to="/auth">Authenticate</NavLink>
+          <NavLink to="/auth"><FontAwesomeIcon icon={faSignInAlt} fixedWidth/> Login</NavLink>
           </li>)}
         
         <li>
@@ -32,7 +34,10 @@ const mainNavigation = props => (
           <NavLink to="/bookings">Bookings</NavLink>
           </li> 
             <li>
-          <button onClick={context.logout}>Logout</button>
+          <button onClick={context.logout}><FontAwesomeIcon icon={faSignOutAlt} fixedWidth/> Logout</button>
+            </li>
+                        <li>
+          <button onClick={context.logout}><FontAwesomeIcon icon={faSignOutAlt} fixedWidth/> Logout</button>
             </li>
 
         </React.Fragment>

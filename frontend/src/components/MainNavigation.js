@@ -5,7 +5,7 @@ import { Nav } from 'react-bootstrap';
 import './MainNavigation.css';
 import { faSignOutAlt , faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import Dropdown from './Dropdown/DropdownMenu';
 const mainNavigation = props => (
   <AuthContext.Consumer>
     {(context) => {
@@ -30,13 +30,14 @@ const mainNavigation = props => (
         </li>
        {context.token &&  (
          <React.Fragment>
+           
            <li>
           <NavLink to="/bookings">Bookings</NavLink>
           </li> 
+          <li>
+             <Dropdown/>
+           </li>
             <li>
-          <button onClick={context.logout}><FontAwesomeIcon icon={faSignOutAlt} fixedWidth/> Logout</button>
-            </li>
-                        <li>
           <button onClick={context.logout}><FontAwesomeIcon icon={faSignOutAlt} fixedWidth/> Logout</button>
             </li>
 
